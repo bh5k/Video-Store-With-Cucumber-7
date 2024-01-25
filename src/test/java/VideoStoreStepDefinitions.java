@@ -8,9 +8,7 @@ import io.cucumber.java.en.When;
 public class VideoStoreStepDefinitions {
 	
 	Customer customer;
-	double rentalAmount;
-		
-	
+
 	@Given("I am an existing customer named {string}")
 	public void i_am_an_existing_customer_named(String name) throws Throwable {
 		customer = new Customer(name);

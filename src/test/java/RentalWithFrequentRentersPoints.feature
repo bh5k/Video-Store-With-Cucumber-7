@@ -19,3 +19,12 @@ Feature: Calculate Rental Costs and Frequent Renter Points
       | "Lisa"     | "Dunkirk"      | "New Release" |    3 |    9.0 |      2 |
       | "Tori"     | "Babe"         | "Childrens"   |    1 |    1.5 |      1 |
       | "Thomas"   | "Lion King"    | "Childrens"   |    4 |    3.0 |      1 |
+
+  @MultipleMovieRental
+  Scenario: Multiple movie rental
+    Given I am an existing customer named "Bill"
+    When I rent "Spiderman" of "Regular" for 2
+    When I rent "Wonder Woman" of "New Release" for 2
+    When I rent "Babe" of "Childrens" for 3
+    Then my bill is 9.5
+    And I earn Frequent Renter 4

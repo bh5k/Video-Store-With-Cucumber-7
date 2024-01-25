@@ -30,10 +30,15 @@ Feature: Calculate Rental Costs
       | "Lisa"     | "Dunkirk"      | "New Release" |    3 |    9.0 |
       | "Tori"     | "Babe"         | "Childrens"   |    1 |    1.5 |
       | "Thomas"   | "Lion King"    | "Childrens"   |    4 |      3 |
-      | "Thomas"   | "Lion King"    | "Regular"     |   40 |     59 |
+      | "Thomas"   | "Lion King"    | "Regular"     |   10 |     14 |
+      | "Thomas"   | "Lion King"    | "Regular"     |   5 |     6.5 |
+      | "Thomas"   | "Wish"    | "New Release"     |   3 |     9.0 |
 
+  @MultipleMovieRental
   Scenario: Multiple movie rental
     Given I am an existing customer named "Bill"
     When I rent "Spiderman" of "Regular" for 2
     When I rent "Wonder Woman" of "New Release" for 2
-    Then my bill is 8.0
+    When I rent "Babe" of "Childrens" for 4
+    When I rent "Wish" of "New Release" for 3
+    Then my bill is 20.0
