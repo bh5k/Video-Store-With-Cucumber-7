@@ -4,7 +4,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/java/resources",
+        features = "src/test/java/resources/features",
         glue = "stepdefinitions"
 )
 public class MovieTestRunner {
