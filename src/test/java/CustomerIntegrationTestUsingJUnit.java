@@ -1,8 +1,11 @@
 import static org.junit.Assert.assertEquals;
 
+import model.Customer;
+import model.Movie;
+import model.Rental;
 import org.junit.Test;
 
-public class CustomerTest {
+public class CustomerIntegrationTestUsingJUnit {
 
 	@Test
 	public void shouldProduceEmptyStatementWithoutRental() {

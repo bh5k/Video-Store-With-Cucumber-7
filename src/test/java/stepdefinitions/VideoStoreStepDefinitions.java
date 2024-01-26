@@ -1,9 +1,13 @@
+package stepdefinitions;
 
+import model.Movie;
+import model.Rental;
 import org.junit.Assert;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import model.Customer;
 
 public class VideoStoreStepDefinitions {
 	

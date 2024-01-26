@@ -1,22 +1,22 @@
-
+package model;
 
 
 import java.util.List;
 
 public class Customer {
 	private String name;
-	private List<Rental> rentals;
+	private List<model.Rental> rentals;
 	
 	public Customer(String name)  {
 		this.name = name;
-		this.rentals = new java.util.ArrayList<Rental>();
+		this.rentals = new java.util.ArrayList<model.Rental>();
 	}
 	
 	public String getName() {
 		return name;
 	}
 	
-	public void addRental(Rental aRental) {
+	public void addRental(model.Rental aRental) {
 		rentals.add(aRental);
 	}
 	
@@ -25,7 +25,7 @@ public class Customer {
 		int frequentRenterPoints = 0;
 		
 		String result = "Rental Record for " + getName() + "\n";
-		for (Rental each : rentals) {
+		for (model.Rental each : rentals) {
 			double thisAmount = each.getChargesFor();	
 			
 				frequentRenterPoints += each.getFrequentRenterPointsFor();
@@ -49,7 +49,7 @@ public class Customer {
 		
 		double totalBill = 0;
 		
-		for (Rental each : rentals) {
+		for (model.Rental each : rentals) {
 			double thisAmount = each.getChargesFor();
 			totalBill += thisAmount;
 			System.out.println(each.getMovie().getTitle() + " this amount = " + thisAmount);
@@ -61,7 +61,7 @@ public class Customer {
 	
 	public int getFrequentRenterPoints()  {
 		int frequentRenterPoints = 0;
-		for (Rental each : rentals) {
+		for (model.Rental each : rentals) {
 			double renterPoints = each.getFrequentRenterPointsFor();
 			
 			frequentRenterPoints += renterPoints;

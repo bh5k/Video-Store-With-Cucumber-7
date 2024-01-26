@@ -1,15 +1,15 @@
-
+package model;
 
 public class Rental {
-	private Movie movie;
+	private model.Movie movie;
 	private int daysRented;
 
-	public Rental(Movie movie, int daysRented) {
+	public Rental(model.Movie movie, int daysRented) {
 		this.movie = movie;
 		this.daysRented = daysRented;
 	}
 
-	public Movie getMovie() {
+	public model.Movie getMovie() {
 		return movie;
 	}
 
@@ -58,7 +58,7 @@ public class Rental {
 	private int calculateBonusPoints()  {
 			int bonus = 0;
 		
-		if((getMovie().getPriceCode() == Movie.NEW_RELEASE) && getDaysRented() > 1) {
+		if((getMovie().getPriceCode() == model.Movie.NEW_RELEASE) && getDaysRented() > 1) {
 			bonus = 1;
 		}
 			return bonus;
