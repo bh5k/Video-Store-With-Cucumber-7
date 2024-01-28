@@ -1,6 +1,0 @@
-projectKey=Video-Store-With-Cucumber-7
-serverUrl=http://localhost:9000
-serverVersion=9.7.1.62043
-dashboardUrl=http://localhost:9000/dashboard?id=Video-Store-With-Cucumber-7
-ceTaskId=AYXoiNx2S5f3bEVP4Fqx
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AYXoiNx2S5f3bEVP4Fqx
